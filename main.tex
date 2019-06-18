@@ -1,0 +1,404 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\moderncvstyle{classic}                            
+% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+
+\moderncvcolor{green}                                
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\renewcommand{\familydefault}{\rmdefault}         
+% to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+%\nopagenumbers{}                                  
+% uncomment to suppress automatic page numbering for CVs longer than one page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% character encoding
+\usepackage[utf8]{inputenc}                       
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+%\usepackage{CJKutf8}                              
+% if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+
+\setlength{\hintscolumnwidth}{1.7cm}                
+% if you want to change the width of the column with the dates
+
+%\setlength{\makecvtitlenamewidth}{10cm}           
+% for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{enumitem}
+
+
+
+\newif\ifen
+\newif\ifpt
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\pt}[1]{\ifpt#1\fi}
+
+
+\pttrue % Uncomment for portuguese document
+%\entrue % Uncomment for english document
+
+\pt{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% personal data
+\name{\Huge \vspace{1cm} Tamiris}{Crepalde Martins}
+%\title{Curriculum Vitae}                              
+\address{Rua Juraci Barbosa da Silva, 12 SB \\ Boa Esperança, Seropédica, RJ - Brasil \\}
+%\vspace{9pt}
+\phone[mobile]{+55 (21) 99632 9170}                   
+%\phone[mobile]{024 99848 9386 [whatsapp]}                    
+%\phone[fax]{+3~(456)~789~012}                      
+\email{tamiriscrepalde@poli.ufrj.br}                     
+\homepage{https://br.linkedin.com/in/tamiriscrepalde}            
+%\extrainfo{additional information}                 
+%\photo[64pt][0.4pt]{'IMG_20160123_182822391.jpg'}       %'64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[]{}{IMG_20160123_182822391.jpg}
+%\end{figure}
+
+%\end{}
+
+%\quote{Some quote}                                 
+% optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%--------------------------------------------------------
+%            content
+%--------------------------------------------------------
+
+
+
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          
+% to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+
+\makecvtitle
+
+%\pt{
+%\section{Objetivo}
+%\vspace{4pt}
+%\small{Formanda do curso de engenharia elétrica da Universidade Federal do Rio de Janeiro, busco uma oportunidade de iniciar minha carreira no setor elétrico.}
+
+
+
+%\section{Interesses}
+%\small{Sistemas de potência, planejamento, programação, fontes renováveis, geração distribuída, regulação.}
+
+\vspace{-1.7cm}
+
+\section{QUALIFICAÇÕES ACADÊMICAS}
+%\vspace{2pt}
+\begin{itemize}
+	
+	\item[]{\cventry{Abr 2013 - Dez 2018}{Engenharia Elétrica}{Universidade Federal do Rio de Janeiro}{Rio de Janeiro - RJ}{\textit{Graduação}}{Conhecimentos relevantes em probabilidade, máquinas elétricas, eletrônica de potência, programação, sistemas de potência, geração distribuída e sistemas HVDC.}}\vspace{-0.25cm}
+	
+	\item[]{\cventry{Jan 2010 - Jun 2011}{Engenharia Elétrica}{Universidade Severino Sombra}{Vassouras - RJ}{\textit{Graduação }}{Interrompido}}\vspace{-0.25cm}
+
+	\item[]{\cventry{Fev 2007 - Dez 2009}{Eletromecânica}{Escola técnica Pandiá Calógeras}{Volta Redonda - RJ}{\textit{Ensino Médio Técnico}}{Conhecimentos relevantes em eletrônica analógica e digital, análise de circuitos, instalações elétricas, cadeia de fabricação do aço e processos de usinagem.}}
+	
+\end{itemize}
+
+
+\section{EXPERIÊNCIA PROFISSIONAL}
+%\vspace{2pt}
+\begin{itemize}
+	
+	\item[]{\cventry{Set 2016 - Ago 2018}{Estagiária Nível Superior}{CEPEL - Centro de Pesquisas de Energia Elétrica}{Rio se Janeiro, RJ}{}{Forneceu suporte à equipe de desenvolvimento do Programa de Análise de Redes ANAREDE por dois anos. Fortaleceu conhecimentos em análise de sistemas de potência e competências em programação. Implementou, como principal projeto, aprimoramentos no módulo de emissão de relatórios para análise de contingências do ANAREDE.}}\vspace{-0.15cm}
+	
+	\item[]{\cventry{Fev 2014 - Jul 2016}{Líder de Projeto | Capitã}{Equipe de Robótica UFRJ MinervaBots}{Rio se Janeiro, RJ}{}{Implementou gerencimento através de metodologia \textit{Scrum} por meio da plataforma \textit{Trello}. Criou processo seletivo com foco em avalição por competência e facilitou avaliação 360º. Conquistou 7 trófeus nacionais e qualificação para o mundial International Robot-Sumo Tournament 2016, realizado em Tokyo, Japão. }}\vspace{-0.15cm}
+	
+	\item[]{\cventry{Jan 2013 - Abr 2013}{Eletricista de Manutenção II}{CSN - Companhia Siderúrgica Nacional}{Volta Redonda - RJ}{}{Realizou inspeção da construção da planta de siderurgia Aços Longos na Usina Presidente Vargas. Vivênciou a metodologia 5S e método de gestão Ciclo PDCA. Realizou trabalhos referentes a manutenção elétrica geral.}}\vspace{-0.15cm}
+	
+	\item[]{\cventry{Jun 2010 - Jul 2011}{Balconista}{Cia do Livro}{Vassouras - RJ}{}{Realizou atendimento ao cliente, controle e operação de caixa, controle e manutenção de estoque, organização e manutenção do espaço.}}\vspace{-0.15cm}
+	
+	\item[]{\cventry{Jul 2009 - Jan 2010}{Estagiário Nível Técnico}{CSN - Companhia Siderúrgica Nacional}{Volta Redonda - RJ}{}{Avaliou inspeções e manutenções em máquinas elétricas ao longo da planta de aços planos da Usina Presidente Vargas. Realizou manutenção elétrica estática e dinâmica e manutenção mecânica.}}\vspace{-0.15cm}
+
+\end{itemize}
+
+
+
+%\section{Experiência Profissional - Freelancer}
+%\vspace{6pt}
+%\begin{itemize}
+	
+	%\item{\cventry{2011 - 2013}{Recepcionista de Formaturas}{MP Eventos}{Volta Redonda e Região- RJ}{}{\vspace{3pt}Trabalhos pontuais envolvendo a realização de formaturas. As atribuições envolviam recepcionar os convidados, auxiliar equipe organizacional durante os eventos e liderar equipe de recepcionitas.}}
+	%\vspace{6pt}
+	
+	%\item{\cventry{Junho 2010}{Garçonete}{Hotel Varandas}{Conservatória - RJ}{}{\vspace{3pt}Trabalhos pontuais como garçonete em um tradicional hotel fazenda em Conservatória. Atribuições envolvendo unicamente atendimento aos hospedes nos horários de refeição.}}
+	%\vspace{6pt}
+	
+	%\item{\cventry{2010 - 2012}{Recepcionista em eventos universitários}{Diversos}{Volta Redonda - RJ}{}{\vspace{3pt}Estágio na área de manutenção elétrica de motores e geradores na GEO. Trabalho envolvendo manutenção deral de motores, tanto mecânica quanto elétrica em toda a planta da Usina Presidente Vargas.}}
+
+%\end{itemize}
+
+
+
+%\subsection{Projetos}
+%\vspace{5pt}
+%\begin{itemize}
+	
+	%\item{\textbf{Masters Project (Ongoing):} \textit{'Development of an Intelligent Humanoid Robot'}
+	%\vspace{3pt}
+
+%\end{itemize}
+
+
+
+\section{HABILITAÇÕES E CERTIFICADOS}
+%\vspace{2pt}
+\begin{itemize}
+	
+	\item \textbf{Linguagens} Português \textit{Nativo} | Inglês \textit{avançado} | Espanhol \textit{básico}.\vspace{-0.15cm}
+	
+	\item \textbf{Programação} Fortran | Python | MatLab Simulink | Mathematica | Jupyter | SVN.\vspace{-0.15cm}
+	
+	\item \textbf{Ferramentas} ANAREDE | ANAFAS | FLUPOT | PSCad | PSIM.\vspace{-0.15cm}
+	
+	\item \textbf{Office} MS Office | MS Visual Studio | \LaTeX. \vspace{-0.15cm} 
+	
+	\item \textbf{Cursos} Planejamento do Sistema Elétrico (Independente, 27h, 2019) | Curso Básico - ANAREDE (CEPEL, 21h, 2017) | Curso FLUPOT (CEPEL, 21h, 2017) | Programa de Formação de Lideranças (Fundação Estudar, 20h, 2016) | Curso NR10 (SENAC, 40h, 2013).
+	
+\end{itemize}
+
+
+
+\section{EXTRA-CURRICULAR}
+%\vspace{2pt}
+\begin{itemize}
+	
+	\item[] {\cventry{Jan 2017 - Jul 2018}{Comissão de Formatura}{Departamento de Engenharia Elétrica UFRJ}{Rio de Janeiro - RJ}{}{Organizou festa de formatura da turma de formandos do ano de 2018. Realizou pesquisas, reuniões e negociações com a empresa contratada visando atender as demandas da turma de formandos.}}
+	
+	\item[]{\cventry{Jul 2016 - Jun 2018}{Representante Discente}{Departamento de Engenharia Elétrica, UFRJ}{Rio se Janeiro - RJ}{}{Desenvolveu uma cultura de participação estudantil nas decisões departamentais, aproximando professores e alunos. Colaborou nas reuniões de colegiado e na Comissão de Orientação e Acompanhamento Acadêmico.}}
+	
+	%\item[] {\cventry{Set 2015 - Dez 2016}{Rede Alumni Núcleo}{Na Prática, Fundação Estudar}{Rio de Janeiro - RJ}{}{Participou em \textit{meetups}, palestras e eventos organizados pelos líderes da Rede com foco em fornecer experiências que estimulem o desenvolvimento pessoal e profissional dos membros.}}
+	
+	%\item[] {\cventry{Out 2010 - Atualmente}{Presidente de Mesa}{TRE-RJ}{Volta Redonda - RJ}{}{Colabora, voluntariamente, com o Tribunal Regional Eleitoral nas eleições desde 2010. Assumiu nas eleições de 2018 o posto de presidente de mesa.}}
+
+
+\end{itemize}
+
+
+
+%\section{References}
+%\vspace{6pt}
+%\begin{itemize}
+	
+	%\item{Up to 4 references available on request}
+
+%\end{itemize}
+}
+
+\en{
+
+%**
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% personal data
+\name{\Huge \vspace{1cm} Tamiris}{Crepalde Martins}
+%\title{Curriculum Vitae}                              
+\address{Street Juraci Barbosa da Silva, 12 SB \\ Boa Esperança, Seropédica, RJ - Brazil \\}
+%\vspace{9pt}
+\phone[mobile]{+55 (21) 99632 9170}                   
+%\phone[mobile]{024 99848 9386 [whatsapp]}                    
+%\phone[fax]{+3~(456)~789~012}                      
+\email{tamiriscrepalde@poli.ufrj.br}                     
+\homepage{https://br.linkedin.com/in/tamiriscrepalde}            
+\extrainfo{\textbf{Brazilian citizen}}                 
+%\photo[64pt][0.4pt]{'IMG_20160123_182822391.jpg'}       %'64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[]{}{IMG_20160123_182822391.jpg}
+%\end{figure}
+
+%\end{}
+
+%\quote{Some quote}                                 
+% optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%--------------------------------------------------------
+%            content
+%--------------------------------------------------------
+
+
+
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          
+% to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+
+\makecvtitle
+%**
+%\section{Objective}
+%\vspace{4pt}
+%\small{Describe...}
+
+
+
+%\section{Interesses}
+%\small{Sistemas de potência, planejamento, programação, fontes renováveis, geração distribuída, regulação.}
+
+\vspace{-1.7cm}
+
+\section{EDUCATIONAL BACKGROUND}
+\vspace{2pt}
+\begin{itemize}
+	
+	\item[]{\cventry{Apr 2013 - Dec 2018}{Undergraduation}{Federal University of Rio de Janeiro}{Rio de Janeiro - RJ}{\textit{Electrical Engineering}}{}}\vspace{-0.15cm}
+	
+	\item[]{\cventry{Jan 2010 - Jun 2011}{Undergraduation}{Severino Sombra University}{Vassouras - RJ}{\textit{Electrical Engineering \textbf{Interrupted}}}{}}\vspace{-0.15cm}
+	
+	\item[]{\cventry{Feb 2007 - Dec 2009}{Technical High School}{Pandiá Calógeras Technical School}{Volta Redonda - RJ}{\textit{Electromechanical}}{}}
+	
+\end{itemize}
+
+
+
+\section{PROFESSIONAL BACKGROUND}
+\vspace{2pt}
+\begin{itemize}
+	
+	\item[]{\cventry{Sep 2016 - Aug 2018}{Power Engineering Intern}{CEPEL - Electrical Energy Research Center}{Rio se Janeiro, RJ}{}{During my internship at CEPEL, I worked supporting the team in the development of a power system analysis tool, the programming language used was Fortran. This was a great opportunity to enhance my electrical engineering skills, by taking some training sessions about some of CEPEL’s models such as ANAREDE and FLUPOT. Also, was an environment where I could become better at programming and understanding how to develop an electrical engineering model. There I was in charge of the development of an ANAREDE module used to produce reports related to contingency studies, a feature requested by the National System Operator (ONS).}}
+	
+	\item[]{\cventry{Jul 2016 - Jun 2018}{Discent Representative}{Electrical Engineering Department, UFRJ}{Rio se Janeiro, RJ}{}{In my last year as student I applied as a volunteer to be the student’s representative. This was I great challenge, where I could propose some changes in the programme to make it more adherent to today’s industry demands. This was done by listening to feedbacks of all department students and some professors.}}
+	
+	\item[]{\cventry{Jul 2015 - Jun 2016}{Captain}{Robotic's Team UFRJ MinervaBots}{Rio se Janeiro, RJ}{}{I participated in the university robotics team for two and a half years. It is a group created to give students the opportunity to design and build robots for competitions. I had many duties in this group, starting as mechanical designer and, in the last year, taking over the team leadership. As team captain I had the responsibility to manage a team of almost forty people, with different backgrounds, ranging from mechanical to electrical engineering. During my time as team captain we had the opportunity to make some management improvements which led to the first gold medal in the history of this group.}}
+	
+	\item[]{\cventry{Jan 2015 - Jun 2015}{Project Leader}{Robotic's Team UFRJ MinervaBots}{Rio se Janeiro, RJ}{}{}}
+	
+	\item[]{\cventry{Jan 2013 - Apr 2013}{Maintenance Eletrician}{CSN - National Steel Company}{Volta Redonda - RJ}{}{Describe...}}
+	
+	\item[]{\cventry{Jun 2010 - Jul 2011}{Balconista}{Cia do Livro}{Vassouras - RJ}{}{\vspace{3pt}No período foram realizados trabalhos envolvendo atendimento diferenciado ao cliente, controle e operação de caixa, controle e manutenção de estoque, organização e manutenção do espaço.}}
+	
+	\item[]{\cventry{Jul 2009 - Jan 2010}{Maintenance Eletrician Intern}{CSN - National Steel Company}{Volta Redonda - RJ}{}{Internship program developed in the area of electrical and mechanical maintenance of motors and generators. The work involved follow-up of inspections and maintenance throughout the Presidente Vargas steelworks, static maintenance and study of the structures that make up the engines and generators.}}
+	
+\end{itemize}
+
+
+%\section{Experiência Profissional - Freelancer}
+%\vspace{6pt}
+%\begin{itemize}
+
+%\item{\cventry{2011 - 2013}{Recepcionista de Formaturas}{MP Eventos}{Volta Redonda e Região- RJ}{}{\vspace{3pt}Trabalhos pontuais envolvendo a realização de formaturas. As atribuições envolviam recepcionar os convidados, auxiliar equipe organizacional durante os eventos e liderar equipe de recepcionitas.}}
+%\vspace{6pt}
+
+%\item{\cventry{Junho 2010}{Garçonete}{Hotel Varandas}{Conservatória - RJ}{}{\vspace{3pt}Trabalhos pontuais como garçonete em um tradicional hotel fazenda em Conservatória. Atribuições envolvendo unicamente atendimento aos hospedes nos horários de refeição.}}
+%\vspace{6pt}
+
+%\item{\cventry{2010 - 2012}{Recepcionista em eventos universitários}{Diversos}{Volta Redonda - RJ}{}{\vspace{3pt}Estágio na área de manutenção elétrica de motores e geradores na GEO. Trabalho envolvendo manutenção deral de motores, tanto mecânica quanto elétrica em toda a planta da Usina Presidente Vargas.}}
+
+%\end{itemize}
+
+
+
+%\subsection{Projetos}
+%\vspace{5pt}
+%\begin{itemize}
+
+%\item{\textbf{Masters Project (Ongoing):} \textit{'Development of an Intelligent Humanoid Robot'}
+%\vspace{3pt}
+
+%\end{itemize}
+
+
+
+\section{LANGUAGES AND KEY SKILLS}
+\vspace{2pt}
+\begin{itemize}
+	
+	\item \textbf{Languages} Portuguese \textit{Native speaker} | English \textit{advanced} | Espanhol \textit{basic}. \vspace{-0.15cm}
+	
+	\item \textbf{Programming Languages} Fortran | Python | MatLab Simulink | Mathematica | Jupyter | SVN. \vspace{-0.15cm}
+	
+	\item \textbf{Tools} ANAREDE | ANAFAS | FLUPOT | PSCad | PSIM. \vspace{-0.15cm}
+	
+	\item \textbf{Office} MS Office | MS Visual Studio | \LaTeX. \vspace{-0.15cm}
+	
+	\item \textbf{Certifications} Electrical System Planning (27h, 2019) | Basic Course - ANAREDE (CEPEL, 21h, 2017) | Course FLUPOT (CEPEL, 21h, 2017) | Leadership Formation Program (Fundação Estudar, 20h, 2016) | Course NR10 (SENAC, 40h, 2013).
+	
+\end{itemize}
+
+
+
+\section{EXTRACURRICULAR ACTIVITIES}
+\vspace{2pt}
+\begin{itemize}
+	
+	\item[]{\cventry{Sep 2015 - Dec 2016}{Alumni Núcleo}{Fundação Estudar}{Rio de Janeiro}{}{Alumni of face-to-face programs at Na Prática, Fundação Estudar. Focusing on the creation of a network of young people with the will and potential to transform Brazil, providing experiences that stimulate the personal and professional development of its members. It has four main pillars: leadership, networks, market and purpose.}}
+	
+	\item[]{\cventry{Sep 2013 - Aug 2014}{'Young Talent for Science CAPES', - CAPES'}{LASUP, DEE - UFRJ}{Rio de Janeiro}{}{I worked supporting the team of engineers in conducting experiments with the train known as MagLev, which stands for Magnetic Levitation. This project is cutting edge and is a future solution to tackle transportation problems in the country.}}
+	
+\end{itemize}
+
+
+
+%\section{References}
+%\vspace{6pt}
+%\begin{itemize}
+
+%\item{Up to 4 references available on request}
+
+%\end{itemize}
+}
+
+% Publications from a BibTeX file without multibib
+% for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        
+% 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   
+% 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   
+% 'publications' is the name of a BibTeX file
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
