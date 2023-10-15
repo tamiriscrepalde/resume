@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[11pt,a4paper]{moderncv}
 % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 \moderncvstyle{banking}
@@ -16,6 +16,7 @@
 % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\listitemsymbol}{$\diamond$ }
 % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 
 %\nopagenumbers{}
@@ -29,7 +30,7 @@
 % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% adjust the page margins
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.92]{geometry}
 
 \setlength{\hintscolumnwidth}{2.5cm}
 % if you want to change the width of the column with the dates
@@ -49,6 +50,15 @@
 \newcommand{\en}[1]{\ifen#1\fi}
 \newcommand{\pt}[1]{\ifpt#1\fi}
 
+% relate to multicolumn
+\usepackage{layout}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+% \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\firstname{}
+\lastname{}
 
 % \pttrue % Uncomment for portuguese document
 \entrue % Uncomment for english document
@@ -66,37 +76,8 @@
 \homepage{https://br.linkedin.com/in/tamiriscrepalde}
 \extrainfo{\href{https://github.com/tamiriscrepalde}{https://github.com/tamiriscrepalde}}
 
-%\photo[64pt][0.4pt]{'IMG_20160123_182822391.jpg'}       %'64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\begin{figure}
-%	\centering
-%	\includegraphics[]{}{IMG_20160123_182822391.jpg}
-%\end{figure}
-
-%\end{}
-
-%\quote{Some quote}
-% optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%--------------------------------------------------------
-%            content
-%--------------------------------------------------------
-
-
-
 
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}
-% to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
 
 \makecvtitle
 
@@ -251,111 +232,72 @@
 
 \en{
 \vspace{-35}
-\section{Objective}
+% \section{Objective}
 
-\small{Machine Learning Engineer/Data Scientist with more than three years of experience developing projects in Data Science looking for a new challenge as a Data Scientist. With a systemic vision and the ability to translate business insights to stakeholders, I want to expand my knowledge while developing data products to help companies to reach their business goals.}
+% \small{Mid-level Data Scientist with more than four years of experience developing projects in Data Science looking for a new challenge. With a systemic vision and the ability to translate business insights to stakeholders, I want to expand my knowledge while developing data products focusing on reaching business goals.}
+
+\section{Professional Background}
+\vspace{3}
+\cventry{Aug 21 - Current}{Hurb}{Data Scientist}{Rio de Janeiro, RJ}{}{
+	\cvlistitem{Developed a heuristic to predict hotel room prices by applying Kernel Density Estimation, which became the main resource to precify travel packages' hotel room nights.}
+	\cvlistitem{Improved a Hotel Rooms Deduplication algorithm focusing on creating label functions based on business rules.}
+	\cvlistitem{Developed a Demand Estimator using Google Vertex AI, Flyte as orchestrator, and MLFlow for monitoring. The project helped commercial executives to evaluate future demand and price to improve negotiations. It was an extensive data modeling challenge with plenty of business rules and constraints transformed into features.}
+	\cvlistitem{Built a K-Means clusterization model to cluster hotel based on marketing performance metrics, helping Performance Marketing Team to improve bidding strategies. }
+}
+\vspace{6}
+
+\cventry{Mar 20 - Aug 21}{Hurb}{Data Analyst}{Rio de Janeiro, RJ}{}{
+	\cvlistitem{Developed a pipeline for offline transaction tracking through Google's HTTP Request Measurement Protocol, using Airflow as orchestrator, allowing the Performance Team to use accurate sales data to enhance Google Ads campaigns.}
+	\cvlistitem{Implemented Google Analytics' Google Enhanced E-commerce using Google Tag Manager, enriching user interactions data collection and allowing the development of projects such as Image Selection and Custom Search Results based on CTR.}
+	\cvlistitem{Worked giving support to the Commercial and Marketing Performance teams creating tables, views, and dashboards to support a wide variety of strategic decisions.}
+}
+\vspace{6}
+
+
+\cventry{Aug 19 - Mar 20}{Hurb}{Data Science Trainee}{Rio de Janeiro, RJ}{}{
+	% \cvlistitem{Supported stakeholders from teams like Product, Commercial, and Marketing. Labored extensively with Google Analytics data through SQL and BigQuery.}
+	\cvlistitem{Supported business areas by using SQL to translate data into business insights through dashboardings and reports.}
+	\cvlistitem{Developed a study case, using Google Trends data, about destinations with high demand for which we didn't use to sell travel packages; we could identify destinations that turned into top sellers in the following years.}
+}
+
+
+% \vspace{-10}
+\section{Volunteering}
+\vspace{3}
+\cventry{Jul 23 - Current}{Omdena}{Data Scientist}{}{}{
+	\cvlistitem{ [Togo Chapter] Development of a timeseries model to predict extreme weather events in Togo.}
+	\cvlistitem{ [São Paulo Chapter] Development of a Coffee disease classifier to help Brazilian farmers addressing such problems.}
+}
 
 \vspace{-5}
 \section{Skills}
 
-\begin{itemize}
-\item Python | Pandas | Matplotlib | Seaborn | Scikit learn | SQL | Git | Fortran
-\item Google Cloud Platform | Flyte | Airflow | MLFlow | Metabase | VSCode | \LaTeX | MS Office
-\item Portuguese Native speaker | English Professional proficiency CECRL C1 | Spanish Basic communication skills LR
-\end{itemize}
+\cvlanguage{Programming languages}{ Python, scikit-learn, SQL, Git, \LaTeX }{}
+\cvlanguage{Other software/tools}{ GCP, BigQuery, VertexAI, Airflow, Flyte, Metabase, MLFlow, Machine Learnin,g }{}
+% \vspace{-10}
+\cvlanguage{}{Supervised learning, Unsupervised learning }{}
+\cvlanguage{Interpersonal}{ Critical thinking, Problem solving, Analytical skills, Leadership }{}
+\cvlanguage{Languages}{ Portuguese (Native); English (Professional proficiency CECRL C1)}{}
 
 
-\section{Professional Background}
-\vspace{3}
-
-\begin{itemize}
-
-    \item{\cventry{}{}{Hurb}{Rio de Janeiro, RJ}{}{\vspace{-10pt}
-    \cventry{Jul 22 - Current}{\textbf{Machine Learning Engineer}}{}{}{}{
-    Developed a heuristic to predict hotel room prices by applying Kernel Density Estimation to improve commercial negotiation. I also worked on a Hotel Rooms Deduplication algorithm that used NER to build the dataset and Snorkel for classification based on label functions.
-    }
-	\vspace{3}
-    \cventry{Aug 21 - Jul 22}{\textbf{Junior Machine Learning Engineer}}{}{}{}{
-    Contributed to Growth Marketing, Commercial, and Product while developing projects from data wrangling to deployment. Developed a Demand Estimator using Google Vertex AI, Flyte for orchestration, and MLFlow for monitoring. The project involved extensive data modeling with plenty of business rules and constraints transformed into features.}
-	\vspace{3}
-    \cventry{Nov 20 - Aug 21}{\textbf{Data Analyst}}{}{}{}{
-    Developed a pipeline for offline transaction tracking through HTTP Request Measurement Protocol from Google, using Airflow as an orchestrator. The project enabled our Performance Team to use more accurate sales data to enhance Google Ads campaigns.}
-	\vspace{3}
-    \cventry{Mar 20 - Nov 20}{\textbf{Junior Data Analyst}}{}{}{}{
-    Supported stakeholders from teams like Product, Commercial, and Marketing. Labored extensively with Google Analytics data through SQL and BigQuery. Implemented the data tracking Google Enhanced E-commerce using Google Tag Manager for Google Analytics.}
-	\vspace{3}
-    \cventry{Aug 19 - Mar 20}{\textbf{Data Science Trainee}}{}{}{}{
-    Assisted business areas such as Commercial and Marketing Performance by developing dashboards and reports on Metabase to support stakeholders' decisions. Contributed to a tourism destination demand study using Google Trends data, which identified destinations that turned into top sellers in the following years.
-    }
-    }}
-	\vspace{6pt}
-
-	\item{\cventry{Sep 16 - Aug 18}{Power Engineering Intern at ANAREDE}{CEPEL - Electrical Energy Research Center}{Rio de Janeiro, RJ}{}{\vspace{2pt} Supported the team in developing the power system software ANAREDE, software for steady-state power systems analysis. Worked programming in Fortran and versioning code with TortoiseSVN. Developed a module of reports for contingency studies.}}
-	\vspace{6pt}
-
-\end{itemize}
-
-
-\vspace{-10}
+% \vspace{-10}
 \section{Educational Background}
 
-\begin{itemize}
+\cventry{Abr 13 - Dez 18}{Undergraduation}{Federal University of Rio de Janeiro}{Rio de Janeiro - RJ}{\textit{Electrical Engineering}}{}
 
-	\item{\cventry{Abr 13 - Dez 18}{Undergraduation}{Federal University of Rio de Janeiro}{Rio de Janeiro - RJ}{\textit{Electrical Engineering}}{}}
-	\vspace{6pt}
+% \cventry{Fev 07 - Dez 09}{Technical High School}{Pandiá Calógeras Technical School}{Volta Redonda - RJ}{\textit{Electromechanical}}{}
 
-	% \item{\cventry{Fev 07 - Dez 09}{Technical High School}{Pandiá Calógeras Technical School}{Volta Redonda - RJ}{\textit{Electromechanical}}{}}
 
-\end{itemize}
-
-\vspace{-15}
+% \vspace{-15}
 \section{Courses \& Certificates}
 
-\begin{itemize}
+\cvitem{Data Scientist Nanodegree}{Udacity, \href{https://graduation.udacity.com/confirm/e/aac1149e-6961-11ec-8e17-e3a963d505e9}{\textcolor{beaublue}{certificate}}}{}{}{}{}
+% \cventry{Mar 23}{International English Language Testing System}{British Council}{}{Band Score 7}{ }
+\cvitem{Machine Learning Advanced Solutions Lab}{Google}{}{}{}{ }
+\cvitem{From Data to Insights with Google Cloud Specialization}{Coursera, \href{https://www.coursera.org/account/accomplishments/specialization/certificate/QPCFQLLRBBQ2}{\textcolor{beaublue}{certificate}}}{}{}{}{ }
 
-    \item{\cventry{Jun 23}{Data Scientist Nanodegree}{Udacity}{}{\href{https://graduation.udacity.com/confirm/e/aac1149e-6961-11ec-8e17-e3a963d505e9}{\textcolor{beaublue}{click here}}}{ }}
-    \vspace{-6}
-
-    \item{\cventry{Mar 23}{International English Language Testing System}{British Council}{}{Band Score 7}{ }}
-    \vspace{-6}
-
-    \item{\cventry{Jul 22}{Machine Learning Advanced Solutions Lab}{Google}{}{}{ }}
-    \vspace{-6}
-
-    \item{\cventry{Jul 20}{From Data to Insights with Google Cloud}{Coursera}{}{\href{https://www.coursera.org/account/accomplishments/specialization/certificate/QPCFQLLRBBQ2}{\textcolor{beaublue}{click here}}}{ }}
-    % \vspace{3pt}
-
-\end{itemize}
-
-%\section{References}
-%\vspace{6pt}
-%\begin{itemize}
-
-%\item{Up to 4 references available on request}
-
-%\end{itemize}
 }
-
-% Publications from a BibTeX file without multibib
-% for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}
-% 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}
-% 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}
-% 'publications' is the name of a BibTeX file
-%-----       letter       ---------------------------------------------------------
+% end \en{}
 
 \end{document}
 
