@@ -8,7 +8,7 @@ It serves as a version-controlled and reproducible format of my curriculum vitae
 
 The compiled PDF version of the résumé can be found here:
 
-[View Résumé (main.pdf)](./main.pdf)
+[View Résumé (resume.pdf)](./main.pdf)
 
 > ⚠️ Note: GitHub does not render PDF files directly in the browser. Click the link above to download or open the PDF locally.
 

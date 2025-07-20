@@ -1,274 +1,113 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
 \documentclass[10pt,a4paper,sans]{moderncv}
-% possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
 \moderncvstyle{classic}
-% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-
 \moderncvcolor{blue}
-% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-
 \renewcommand{\familydefault}{\rmdefault}
-% to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 
-%\nopagenumbers{}
-% uncomment to suppress automatic page numbering for CVs longer than one page
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% character encoding
 \usepackage[utf8]{inputenc}
-% if you are not using xelatex ou lualatex, replace by the encoding you are using
-
-%\usepackage{CJKutf8}
-% if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% adjust the page margins
 \usepackage[scale=0.9]{geometry}
-
 \setlength{\hintscolumnwidth}{2.5cm}
-% if you want to change the width of the column with the dates
-
-%\setlength{\makecvtitlenamewidth}{10cm}
-% for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \usepackage{import}
 \usepackage{graphicx}
 \usepackage{ifthen}
 \usepackage{enumitem}
-
-
+\usepackage{hyperref}
 
 \newif\ifen
 \newif\ifpt
 \newcommand{\en}[1]{\ifen#1\fi}
 \newcommand{\pt}[1]{\ifpt#1\fi}
 
+% Escolha o idioma abaixo:
+% \pttrue  % Português
+\entrue  % Inglês
 
-% \pttrue % Uncomment for portuguese document
-\entrue % Uncomment for english document
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% personal data
+% --- Dados pessoais ---
 \name{Tamiris}{Crepalde Martins}
-%\title{Curriculum Vitae}
-%\address{Estrada Retal dos Mil, nº44, Chapero, Seropédica, RJ, 23855-100}
-%\vspace{9pt}
 \phone[mobile]{+55 21 99632 9170}
-%\phone[mobile]{024 99848 9386 [whatsapp]}
-%\phone[fax]{+3~(456)~789~012}
 \email{tamiriscrepaldemartins@gmail.com}
 \homepage{https://br.linkedin.com/in/tamiriscrepalde}
 \extrainfo{\href{https://github.com/tamiriscrepalde}{https://github.com/tamiriscrepalde}}
 
-%\photo[64pt][0.4pt]{'IMG_20160123_182822391.jpg'}       %'64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\begin{figure}
-%	\centering
-%	\includegraphics[]{}{IMG_20160123_182822391.jpg}
-%\end{figure}
-
-%\end{}
-
-%\quote{Some quote}
-% optional, remove / comment the line if not wanted
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%--------------------------------------------------------
-%            content
-%--------------------------------------------------------
-
-
-
-
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}
-% to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
-
 \makecvtitle
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   CURRÍCULO EM PORTUGUÊS              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pt{
+
 \section{Objetivo}
-%\vspace{4pt}
-\small{Engenheira de Machine Learning com quase quatro anos de experiência desenvolvendo projetos em Data Science buscando por um novo desafio como Cientista de Dados. Com visão sistêmica e habilidade de traduzir dados em insights de negócio para stakeholders, busco expandir meu conhecimento enquanto desenvolvo produtos de dados para auxiliar empresas a alcançarem seus objetivos de negócio.}
-
-
-%\section{Interesses}
-%\small{Sistemas de potência, planejamento, programação, fontes renováveis, geração distribuída, regulação, consultoria.}
+\small{Engenheira de Machine Learning com quase quatro anos de experiência em projetos de Ciência de Dados. Possui visão sistêmica e habilidade de traduzir dados em insights estratégicos. Busca novos desafios para desenvolver produtos de dados que apoiem a tomada de decisão em negócios.}
 
 \section{Habilidades}
-
 \begin{itemize}
-\item Python | Pandas | Matplotlib | Seaborn | Scikit learn | SQL | Git | Fortran
-\item Google Cloud Platform | Flyte | Airflow | MLFlow | Metabase | VSCode | \LaTeX | MS Office
-\item Inglês – Proeficiência profissional CECRL C1 | Espanhol - Comunicação básica (leitura e escuta)
+\item Python, SQL, Machine Learning, Deep Learning, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Fortran
+\item Google Cloud Platform (Vertex AI, BigQuery), Azure Databricks, AWS
+\item MLflow, Flyte, Airflow, Git, Databricks Workflows, Feature Engineering, Monitoramento de Modelos
+\item Power BI, Metabase, Google Analytics, Google Tag Manager, Measurement Protocol
+\item VSCode, LaTeX, MS Office, TortoiseSVN
+\item Português (nativo), Inglês (proficiência CEFR C1)
 \end{itemize}
-
 
 \section{Experiência Profissional}
-\vspace{4pt}
 \begin{itemize}
+\item{\cventry{Jul 2024 -- Atual}{Cientista de Dados}{BIX Tech}{Florianópolis, SC}{}{
+Projetos de previsão de lead time e risco de erro na indústria. Implementação de ciclo completo em Azure Databricks com MLFlow, automação via Workflows e suporte a decisões com Power BI.
+}}
 
-	\item{\cventry{Nov20 - Atual}{Data Analyst Pleno}{Hurb}{Rio se Janeiro, RJ}{}{\vspace{2pt} Desenvolvimento de análises estratégicas e com destaque para um projeto de criação e implementação de um pipeline de envio de transações offline para o Google Analytics por meio de envios HTTP Request do Measurement Protocol. }}
-	\subitem{\cventry{Mar20 - Nov20}{Data Analyst Júnior}{}{}{}{\vspace{2pt} Utilização de python para exploração, tratamento e análises de dados. Destaque no período, um projeto de tracking de dados utilizando Google Tag Manager e Google Analytics e implementação do Enhanced Ecommerce do Google. }}
-	\subitem{\cventry{Ago19 - Mar20}{Data Science Trainee}{}{}{}{\vspace{2pt} Desenvolvimento de projetos diversos na área de análise de dados, exploração, tratamento e visualização de dados. Utilização de PostgreSQL, MySQL e Standard SQL para consulta e exploração de dados. Criação de visualizações por meio da plataforma Metabase. }}
-	\vspace{6pt}
+\item{\cventry{Jul 2022 -- Jul 2024}{Cientista de Dados}{Hurb}{Rio de Janeiro, RJ}{}{
+Desenvolvimento de heurística de preços com KDE e modelo de deduplicação de hotéis usando NER e Snorkel.}}
 
-	\item{\cventry{Set16 - Ago18}{Estagiária Nível Superior}{CEPEL - Centro de Pesquisas de Energia Elétrica}{Rio se Janeiro, RJ}{}{\vspace{2pt} Fornecimento de suporte à equipe de desenvolvimento do Programa de Análise de Redes (ANAREDE) com utilização de linguagem Fortran. Meu principal projeto foi a implementação de um modelo de relatório de análise de contingências, por sugestão do Operador Nacional do Sistema, que se tornou meu projeto final de curso.}}
-	\vspace{6pt}
+\item{\cventry{Ago 2021 -- Jul 2022}{Cientista de Dados Júnior}{Hurb}{}{}{
+Estimador de demanda com Vertex AI, Flyte e MLFlow. Foco em engenharia de atributos complexos com regras de negócio.}}
 
-	%\item{\cventry{Jul 16 - Jun 18}{Representante Discente}{Departamento de Engenharia Elétrica, UFRJ}{Rio se Janeiro, RJ}{}{\vspace{2pt} Atuei na busca de criação uma cultura de participação estudantil nas decisões departamentais, além de aproximar professores e alunos para solução de impasses diversos dentro do curso de Engenharia Elétrica e representa-los na COAA, Comissão de Orientação e Acompanhamento Acadêmico.}}
-	\vspace{6pt}
+\item{\cventry{Nov 2020 -- Ago 2021}{Analista de Dados}{Hurb}{}{}{
+Pipeline de conversões offline com Measurement Protocol e Airflow, otimizando campanhas no Google Ads.}}
 
-	%\item{\cventry{Fev 14 - Jul 16}{Líder de Projeto | Capitã}{Equipe de Robótica UFRJ MinervaBots}{Rio se Janeiro, RJ}{}{\vspace{2pt} Responsável geral por uma equipe multidisciplinar de trinta e cinco alunos, fortaleci habilidades de trabalho em equipe, liderança, gestão de pessoas e projetos e \textit{design} em engenharia. Desenvolvi competências como modelagem e simulação com \textit{SolidWorks}, gerencimento através de metodologia \textit{Scrum}, gerenciamento através da plataforma Trello. Auxiliei na criação de processo seletivo com foco em avalição por competência, fui facilitadora de avaliação 360º, além de supervisionar os setores de gestão financeira e marketing.}}
-	\vspace{6pt}
+\item{\cventry{Mar 2020 -- Nov 2020}{Analista de Dados Júnior}{Hurb}{}{}{
+Exploração de dados via SQL e BigQuery. Implementação do Enhanced E-commerce via GTM e Google Analytics.}}
 
-	%\item{\cventry{Jan 13-Abr 13}{Eletricista de Manutenção II}{CSN - Companhia Siderúrgica Nacional}{Volta Redonda - RJ}{}{\vspace{3pt}No período realizei acompanhamento da construção da planta de siderurgia Aços Longos na Usina Presidente Vargas, vivenciando metodologia 5S e método de gestão Ciclo PDCA. Foram desenvolvidos trabalhos referentes a manutenção elétrica geral como manutenção de quadros de distribuição de energia e reparos em instalações elétricas.}}
-	%\vspace{6pt}
+\item{\cventry{Ago 2019 -- Mar 2020}{Trainee em Ciência de Dados}{Hurb}{}{}{
+Dashboards em Metabase e análise de demanda turística via Google Trends.}}
 
-	%\item{\cventry{Junho 2010 - Julho 2011}{Balconista}{Cia do Livro}{Vassouras - RJ}{}{\vspace{3pt}No período foram realizados trabalhos envolvendo atendimento diferenciado ao cliente, controle e operação de caixa, controle e manutenção de estoque, organização e manutenção do espaço.}}
-	%\vspace{6pt}
-
-% 	\item{\cventry{Mar13 - Dez14}{Bolsista de iniciação científica}{LASUP - Laboratório de Aplicação de Supercondutores - Poli UFRJ}{Rio de Janeiro - RJ}{}{\vspace{3pt}Período de atividades no Laboratório de Aplicação de Supercondutores (LASUP) envolvendo realização de testes de estanqueidade nos criostatos utilizados pelo MAGLEV Cobra, trem de levitação magnética, entre outras atividades.}}
-
-% 	\item{\cventry{Jul09 - Jan10}{Estagiário Nível Técnico}{CSN - Companhia Siderúrgica Nacional}{Volta Redonda - RJ}{}{\vspace{3pt}Programa de estágio desenvolvido na área de manutenção elétrica e mecânica de motores e geradores. O trabalho envolveu acompanhamento de inspeções e manutenções em toda a planta de aços planos da Usina Presidente Vargas, manutenção estática e estudo das estruturas que compõe os motores e geradores.}}
-
+\item{\cventry{Set 2016 -- Ago 2018}{Estagiária em Engenharia de Potência}{CEPEL}{Rio de Janeiro, RJ}{}{
+Suporte no software ANAREDE em Fortran e desenvolvimento de relatórios de contingência.}}
 \end{itemize}
 
-\section{Experiência Extra-Curricular}
-\vspace{4pt}
+\section{Formação Acadêmica}
 \begin{itemize}
-
-	\item{\cventry{Jul16 - Jun18}{Representante Discente}{Departamento de Engenharia Elétrica, UFRJ}{Rio se Janeiro, RJ}{}{\vspace{2pt} Atuei na busca de criação uma cultura de participação estudantil nas decisões departamentais, além de aproximar professores e alunos para solução de impasses diversos dentro do curso de Engenharia Elétrica e representa-los na COAA, Comissão de Orientação e Acompanhamento Acadêmico.}}
-	\vspace{6pt}
-
-	\item{\cventry{Fev14 - Jul16}{Líder de Projeto | Capitã}{Equipe de Robótica UFRJ MinervaBots}{Rio se Janeiro, RJ}{}{\vspace{2pt} Responsável geral por uma equipe multidisciplinar de trinta e cinco alunos, fortaleci habilidades de trabalho em equipe, liderança, gestão de pessoas e projetos e \textit{design} em engenharia. }}
-	\vspace{6pt}
-% 	Desenvolvi competências como modelagem e simulação com \textit{SolidWorks}, gerencimento através de metodologia \textit{Scrum}, gerenciamento através da plataforma Trello. Auxiliei na criação de processo seletivo com foco em avalição por competência, fui facilitadora de avaliação 360º, além de supervisionar os setores de gestão financeira e marketing.
-
+\item{\cventry{Jan 2025 -- Atual}{Mestrado em Ciência da Computação}{Georgia Institute of Technology}{Atlanta, GA}{}{}}
+\item{\cventry{Abr 2013 -- Dez 2018}{Engenharia Elétrica}{Universidade Federal do Rio de Janeiro}{RJ}{}{}}
 \end{itemize}
 
-\section{Qualificações Acadêmicas}
-% \vspace{4pt}
+\section{Cursos e Certificados}
 \begin{itemize}
-
-	\item{\cventry{Abr13 - Dez18}{Graduação}{Universidade Federal do Rio de Janeiro}{Rio de Janeiro - RJ}{\textit{Engenharia Elétrica}}{}}
-	\vspace{6pt}
-
-% 	\item{\cventry{Fev07 - Dez09}{Ensino Médio Técnico}{Escola técnica Pandiá Calógeras}{Volta Redonda - RJ}{\textit{Eletromecânica}}{}}
-
+\item{\cventry{Jun 2023}{Nanodegree em Ciência de Dados}{Udacity}{}{\href{https://graduation.udacity.com/confirm/e/aac1149e-6961-11ec-8e17-e3a963d505e9}{link}}{}}
+\item{\cventry{Mar 2023}{IELTS}{British Council}{}{Nota: 7.0}{}}
+\item{\cventry{Jul 2022}{Machine Learning Advanced Solutions Lab}{Google}{}{}{}}
+\item{\cventry{Jul 2020}{From Data to Insights with Google Cloud}{Coursera}{}{\href{https://www.coursera.org/account/accomplishments/specialization/certificate/QPCFQLLRBBQ2}{link}}{}}
 \end{itemize}
-
-
-%\section{Experiência Profissional - Freelancer}
-%\vspace{6pt}
-%\begin{itemize}
-
-	%\item{\cventry{2011 - 2013}{Recepcionista de Formaturas}{MP Eventos}{Volta Redonda e Região- RJ}{}{\vspace{3pt}Trabalhos pontuais envolvendo a realização de formaturas. As atribuições envolviam recepcionar os convidados, auxiliar equipe organizacional durante os eventos e liderar equipe de recepcionitas.}}
-	%\vspace{6pt}
-
-	%\item{\cventry{Junho 2010}{Garçonete}{Hotel Varandas}{Conservatória - RJ}{}{\vspace{3pt}Trabalhos pontuais como garçonete em um tradicional hotel fazenda em Conservatória. Atribuições envolvendo unicamente atendimento aos hospedes nos horários de refeição.}}
-	%\vspace{6pt}
-
-	%\item{\cventry{2010 - 2012}{Recepcionista em eventos universitários}{Diversos}{Volta Redonda - RJ}{}{\vspace{3pt}Estágio na área de manutenção elétrica de motores e geradores na GEO. Trabalho envolvendo manutenção deral de motores, tanto mecânica quanto elétrica em toda a planta da Usina Presidente Vargas.}}
-
-%\end{itemize}
-
-
-%\subsection{Projetos}
-%\vspace{5pt}
-%\begin{itemize}
-
-	%\item{\textbf{Masters Project (Ongoing):} \textit{'Development of an Intelligent Humanoid Robot'}
-	%\vspace{3pt}
-
-%\end{itemize}
-
-
-\section{HABILITAÇÕES E CERTIFICADOS}
-%\vspace{2pt}
-\begin{itemize}
-
-	\item \textbf{Linguagens} Inglês \textit{avançado}; %Espanhol \textit{básico}.
-	\vspace{4pt}
-
-	\item \textbf{Programação} Fortran \textit{intermediário}; Python \textit{avançado}; SQL \textit{avançado}; MatLab \textit{básico}; Javascript \textit{básico}.
-	\vspace{4pt}
-
-	\item \textbf{Ferramentas} ANAREDE; Visual Studio; MS Office; Git; TortoiseSVN, Metabase; Google BigQuery; Airflow; Dataform.
-	\vspace{4pt}
-
-	\item \textbf{Cursos Extracurriculares} Python for Data Science and Machine Learning Bootcamp (Udemy - Atual); Exploring and Preparing your Data with BigQuery, Creating New BigQuery Datasets and Visualizing Insights, Achieving Advanced Insights with BigQuery, Applying Machine Learning to your Data with GCP (Google Cloud, 2020); The Complete SQL Bootcamp (Udemy, 9h, 2020); Curso Básico - ANAREDE (CEPEL, 21h, 2017); Curso FLUPOT (CEPEL, 21h, 2017).
-
-\end{itemize}
-
-
-% \section{Voluntariado}
-% \vspace{4pt}
-% \begin{itemize}
-
-% 	\item{\cventry{Out10 - Atual}{TRE-RJ}{Voluntária para trabalho eleitoral}{Volta Redonda, RJ}{}{}}
-
-% \end{itemize}
-
-
-% \section{Extra-Curricular}
-% \vspace{4pt}
-% \begin{itemize}
-
-% 	\item \textbf{Comissão de Formatura Engenharia Elétrica UFRJ 2018:} Atuei junto a uma equipe de outros quatro discente na organização da festa de formatura da turma de formandos do ano de 2018. Realizamos, além de pesquisas, reuniões e negociações com a empresa contratada visando atender as demandas da turma de vinte formandos.
-% 	\vspace{6pt}
-
-	%\item \textbf{Rede Alumni Núcleo, Fundação Estudar:} Rede alumni dos programas presenciais do Na Prática, da Fundação Estudar. Foco na criação de uma rede de jovens com vontade e potencial para transformar o Brasil, fornecendo experiências que estimulem o desenvolvimento pessoal e profissional dos membros. Seus pilares principais são liderança, redes, mercado e propósito.
-	%\vspace{6pt}
-
-% \end{itemize}
-
-
-%\section{References}
-%\vspace{6pt}
-%\begin{itemize}
-
-	%\item{Up to 4 references available on request}
-
-%\end{itemize}
 }
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   CURRICULUM IN ENGLISH                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \en{
-% \vspace{-5}
-% \section{Objective}
 
-% \small{Data Scientist with more than five years of experience developing projects in Data Science looking for a new challenge. With a systemic vision and the ability to translate business insights to stakeholders, I want to expand my knowledge while developing data products to help companies to reach their business goals.}
-
-\vspace{-5}
 \section{Skills}
 {\small
 \cvitem{Languages \& Libraries}
-{Python, SQL, Machine Learning, Deep Learning, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Fortran (legacy)}
+{Python, SQL, Machine Learning, Deep Learning, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Fortran}
 
 \cvitem{Cloud Platforms}
 {Google Cloud Platform (Vertex AI, BigQuery), Azure Databricks, AWS}
 
 \cvitem{MLOps \& Engineering}
-{MLflow, Flyte, Airflow, Git, Azure Databricks Workflows, Model Deployment \& Monitoring, Feature Engineering, Data Pipeline Automation, Model Registry}
+{MLflow, Flyte, Airflow, Git, Databricks Workflows, Model Monitoring, Feature Engineering, Pipelines}
 
 \cvitem{Analytics \& Tracking}
-{Power BI, Metabase, Google Analytics, Google Tag Manager, Google Ads Measurement Protocol, Enhanced E-commerce}
+{Power BI, Metabase, Google Analytics, Google Tag Manager, Google Ads Measurement Protocol}
 
 \cvitem{Software Tools}
 {VSCode, LaTeX, MS Office, TortoiseSVN}
@@ -278,100 +117,42 @@
 }
 
 \section{Professional Background}
-\vspace{3}
-
 \begin{itemize}
-\item{\cventry{Jul 25 - Current}{Data Scientist}{BIX Tech}{Florianópolis, SC}{}{\vspace{2pt} Developed machine learning projects for predicting production lead time and error risk in industrial settings. Developed end-to-end cycle in Azure Databricks, using MLFlow for model and artifacts registry, Databricks Workflows to automate pipelines and Power BI for decision-making support.}}
+\item{\cventry{Jul 2024 -- Present}{Data Scientist}{BIX Tech}{Florianópolis, SC}{}{
+Led ML projects to forecast lead time and errors in industrial settings. Full development in Azure Databricks with MLflow and Power BI.}}
 
-\item{\cventry{}{}{Hurb}{Rio de Janeiro, RJ}{}{\vspace{-25pt}
-\cventry{Jul 22 - Jul 24}{\textbf{Data Scientist}}{}{}{}{
-Developed a heuristic to predict hotel room prices by applying Kernel Density Estimation to improve commercial negotiation. I also worked on a Hotel Rooms Deduplication algorithm that used NER to build the dataset and Snorkel for classification based on label functions.
-}
+\item{\cventry{Jul 2022 -- Jul 2024}{Data Scientist}{Hurb}{Rio de Janeiro, RJ}{}{
+Built room pricing heuristics with KDE. Developed deduplication logic using NER and Snorkel.}}
 
-\cventry{Aug 21 - Jul 22}{\textbf{Junior Data Scientist}}{}{}{}{
-Contributed to Growth Marketing, Commercial, and Product while developing projects from data wrangling to deployment. Developed a Demand Estimator using Google Vertex AI, Flyte for orchestration, and MLFlow for monitoring. The project involved extensive data modeling with plenty of business rules and constraints transformed into features.}
+\item{\cventry{Aug 2021 -- Jul 2022}{Junior Data Scientist}{Hurb}{}{}{
+Developed demand estimation model using Vertex AI, Flyte, and MLflow.}}
 
-\cventry{Nov 20 - Aug 21}{\textbf{Data Analyst}}{}{}{}{
-Developed a pipeline for offline transaction tracking through HTTP Request Measurement Protocol from Google, using Airflow as an orchestrator. The project enabled our Performance Team to use more accurate sales data to enhance Google Ads campaigns.}
+\item{\cventry{Nov 2020 -- Aug 2021}{Data Analyst}{Hurb}{}{}{
+Designed Airflow pipeline for offline transactions using Measurement Protocol for Google Ads.}}
 
-\cventry{Mar 20 - Nov 20}{\textbf{Junior Data Analyst}}{}{}{}{
-Supported stakeholders from teams like Product, Commercial, and Marketing. Labored extensively with Google Analytics data through SQL and BigQuery. Implemented the data tracking Google Enhanced E-commerce using Google Tag Manager for Google Analytics.}
+\item{\cventry{Mar 2020 -- Nov 2020}{Junior Data Analyst}{Hurb}{}{}{
+Worked with SQL, BigQuery and implemented Enhanced E-commerce with GTM.}}
 
-\cventry{Aug 19 - Mar 20}{\textbf{Data Science Trainee}}{}{}{}{
-Assisted business areas such as Commercial and Marketing Performance by developing dashboards and reports on Metabase to support stakeholders' decisions. Contributed to a tourism destination demand study using Google Trends data, which identified destinations that turned into top sellers in the following years.
-}
-}}
+\item{\cventry{Aug 2019 -- Mar 2020}{Data Science Trainee}{Hurb}{}{}{
+Created dashboards in Metabase and conducted analysis using Google Trends.}}
 
-\item{\cventry{Sep 16 - Aug 18}{Power Engineering Intern at ANAREDE}{CEPEL - Electrical Energy Research Center}{Rio de Janeiro, RJ}{}{\vspace{2pt} Supported the team in developing the power system software ANAREDE, software for steady-state power systems analysis. Worked programming in Fortran and versioning code with TortoiseSVN. Developed a module of reports for contingency studies.}}
-
-
+\item{\cventry{Sep 2016 -- Aug 2018}{Power Engineering Intern}{CEPEL}{Rio de Janeiro, RJ}{}{
+Worked on ANAREDE power systems software in Fortran. Built reporting module for contingency analysis.}}
 \end{itemize}
 
-
-\vspace{-10}
 \section{Educational Background}
-
 \begin{itemize}
-
-        \item{\cventry{Jan 25 - current}{Master of Science}{Georgia Institute of Technology}{Atlanta, GA}{\textit{Computer Science}}{}}
-
-	\item{\cventry{Apr 13 - Dec 18}{Undergraduation}{Federal University of Rio de Janeiro}{Rio de Janeiro, RJ}{\textit{Electrical Engineering}}{}}
-	\vspace{6pt}
-
-	% \item{\cventry{Fev 07 - Dez 09}{Technical High School}{Pandiá Calógeras Technical School}{Volta Redonda - RJ}{\textit{Electromechanical}}{}}
-
+\item{\cventry{Jan 2025 -- Present}{Master of Science in Computer Science}{Georgia Institute of Technology}{Atlanta, GA}{}{}}
+\item{\cventry{Apr 2013 -- Dec 2018}{Bachelor's in Electrical Engineering}{Federal University of Rio de Janeiro}{RJ}{}{}}
 \end{itemize}
 
-\vspace{-15}
 \section{Courses \& Certificates}
-{\small
 \begin{itemize}
-
-    \item{\cventry{Jun 23}{Data Scientist Nanodegree}{Udacity}{}{\href{https://graduation.udacity.com/confirm/e/aac1149e-6961-11ec-8e17-e3a963d505e9}{\textcolor{beaublue}{click here}}}{ }}
-    \vspace{-6}
-
-    \item{\cventry{Mar 23}{International English Language Testing System}{British Council}{}{Band Score 7}{ }}
-    \vspace{-6}
-
-    \item{\cventry{Jul 22}{Machine Learning Advanced Solutions Lab}{Google}{}{}{ }}
-    \vspace{-6}
-
-    \item{\cventry{Jul 20}{From Data to Insights with Google Cloud}{Coursera}{}{\href{https://www.coursera.org/account/accomplishments/specialization/certificate/QPCFQLLRBBQ2}{\textcolor{beaublue}{click here}}}{ }}
-    
+\item{\cventry{Jun 2023}{Data Scientist Nanodegree}{Udacity}{}{\href{https://graduation.udacity.com/confirm/e/aac1149e-6961-11ec-8e17-e3a963d505e9}{click here}}{}}
+\item{\cventry{Mar 2023}{IELTS}{British Council}{}{Band Score: 7.0}{}}
+\item{\cventry{Jul 2022}{Machine Learning Advanced Solutions Lab}{Google}{}{}{}}
+\item{\cventry{Jul 2020}{From Data to Insights with Google Cloud}{Coursera}{}{\href{https://www.coursera.org/account/accomplishments/specialization/certificate/QPCFQLLRBBQ2}{click here}}{}}
 \end{itemize}
 }
-
-%\section{References}
-%\vspace{6pt}
-%\begin{itemize}
-
-%\item{Up to 4 references available on request}
-
-%\end{itemize}
-}
-
-% Publications from a BibTeX file without multibib
-% for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}
-% 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}
-% 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}
-% 'publications' is the name of a BibTeX file
-%-----       letter       ---------------------------------------------------------
 
 \end{document}
-
-
-%% end of file `template.tex'.
